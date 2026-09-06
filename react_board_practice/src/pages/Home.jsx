@@ -35,7 +35,16 @@ const Home = () => {
                 <tbody>
                     {
                         boardList.map((board, i) => {
-                            
+                            console.log("게시판 정보 하나 출력 : ");
+                            console.log(board);
+                            return(
+                                <tr key={i}>
+                                    <td>{boardList.length - i}</td>
+                                    <td>{board.title}</td>
+                                    <td>{board.writer}</td>
+                                    <td>{board.regDate}</td>
+                                </tr>
+                            );
                         })
                     }
                 </tbody>

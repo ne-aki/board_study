@@ -16,3 +16,5 @@ SELECT
     , WRITER
     , REG_DATE
 FROM board_study.TEST_BOARD;
+#수정반영
+-- 수정

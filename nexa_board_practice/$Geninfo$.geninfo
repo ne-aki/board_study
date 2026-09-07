@@ -9,6 +9,25 @@
       <Script rule_version="1.02"/>
       <GeneratorInfo rule_version="1.3"/>
     </Rule>
+<<<<<<< Updated upstream
     <Info project="C:\workspace\board_study\nexa_board_practice\" generated="C:\workspace\board_study\spring_board_practice\src\main\resources\static\"><File url="typedefinition.xml" checksum="20260907190905" errormsg=""/><File url="appvariables.xml" checksum="20260903172513" errormsg=""/><File url="environment.xml" checksum="20260903172513" errormsg=""/><File url="_resource_\_theme_\blue\theme.xcss" checksum="20260903172513" errormsg=""/><File url="Application_Desktop.xadl" checksum="20260907192119" errormsg=""/><File url="FrameBase\Form_Work.xfdl" checksum="20260907191200" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\framework\Framework.json" checksum="20260828132524" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\resources\Resource.json" checksum="20260828132524" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\CompBase.json" checksum="20260828132520" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ComComp.json" checksum="20260828132518" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\Grid.json" checksum="20260828132520" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ListView.json" checksum="20260828132524" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\DeviceAPI.json" checksum="20260828132520" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\MobileComp.json" checksum="20260828132526" errormsg=""/><File url="FrameBase\Form_Board.xfdl" checksum="20260907193546" errormsg=""/><File url="FrameBase\Form_Home.xfdl" checksum="20260907192322" errormsg=""/></Info>
+=======
+    <Info project="C:\workspace\board_study\nexa_board_practice\" generated="C:\workspace\board_study\spring_board_practice\src\main\resources\static\">
+      <File url="typedefinition.xml" checksum="20260907200527" errormsg=""/>
+      <File url="appvariables.xml" checksum="20260903172513" errormsg=""/>
+      <File url="environment.xml" checksum="20260903172513" errormsg=""/>
+      <File url="_resource_\_theme_\blue\theme.xcss" checksum="20260903172513" errormsg=""/>
+      <File url="Application_Desktop.xadl" checksum="20260907192119" errormsg=""/>
+      <File url="FrameBase\Form_Home.xfdl" checksum="20260907192322" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\framework\Framework.json" checksum="20260828132524" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\resources\Resource.json" checksum="20260828132524" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\CompBase.json" checksum="20260828132520" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ComComp.json" checksum="20260828132518" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\Grid.json" checksum="20260828132520" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ListView.json" checksum="20260828132524" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\DeviceAPI.json" checksum="20260828132520" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\MobileComp.json" checksum="20260828132526" errormsg=""/>
+    </Info>
+>>>>>>> Stashed changes
   </GenInfo>
 </root>

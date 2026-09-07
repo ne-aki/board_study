@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- /////////////////////////////////// 넥사크로플랫폼 UIADAPTER17 설정 시작 /////////////////////////////////// -->
+    <!-- messageSource 빈 추가 -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>messages</value>
+            </list>
+        </property>
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
+
+    <bean id="nexacroFileView"    class="com.nexacro.uiadapter17.spring.core.view.NexacroFileView" />
+    <bean id="nexacroView"        class="com.nexacro.uiadapter17.spring.core.view.NexacroView">
+        <property name="defaultContentType" value="PlatformXml" />
+        <property name="defaultCharset" value="UTF-8" />
+    </bean>
+
+    <!-- 넥사크로플랫폼 RequestMappingHandlerAdapter 구현체 등록 -->
+    <bean class="com.nexacro.uiadapter17.spring.core.resolve.NexacroRequestMappingHandlerAdapter" p:order="100">
+        <property name="customArgumentResolvers">
+            <list><bean class="com.nexacro.uiadapter17.spring.core.resolve.NexacroMethodArgumentResolver" /></list>
+        </property>
+        <property name="customReturnValueHandlers">
+            <list>
+                <bean class="com.nexacro.uiadapter17.spring.core.resolve.NexacroHandlerMethodReturnValueHandler">
+                    <property name="view"     ref="nexacroView" />
+                    <property name="fileView" ref="nexacroFileView" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 넥사크로플랫폼 EXCEPTION-RESOLVER 등록 -->
+    <bean id="exceptionResolver" class="com.nexacro.uiadapter17.spring.core.resolve.NexacroMappingExceptionResolver" p:order="3">
+        <property name="view" ref="nexacroView" />
+        <property name="shouldLogStackTrace" value="true" />
+        <property name="shouldSendStackTrace" value="true" />
+        <property name="defaultErrorMsg" value="fail.common.msg" />
+        <property name="messageSource" ref="messageSource" />
+    </bean>
+    <!-- /////////////////////////////////// 넥사크로플랫폼 UIADAPTER17 설정 끝 /////////////////////////////////// -->
+</beans>

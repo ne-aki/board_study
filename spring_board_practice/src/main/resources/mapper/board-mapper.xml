@@ -19,6 +19,18 @@
             , REG_DATE
         FROM board_study.TEST_BOARD
     </select>
+
+    <insert id="regBoard">
+        INSERT INTO board_study.TEST_BOARD (
+            TITLE
+            , WRITER
+            , CONTENT
+        ) VALUES (
+            #{title}
+            , #{writer}
+            , #{content}
+        )
+    </insert>
 </mapper>
 
 

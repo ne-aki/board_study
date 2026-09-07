@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '4.0.8'
+	id 'org.springframework.boot' version '2.7.18'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
 
@@ -9,12 +9,17 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(25)
+		languageVersion = JavaLanguageVersion.of(17)
 	}
 }
 
 repositories {
 	mavenCentral()
+	// Nexacro uiadapter17 저장소 추가
+	maven {
+		url 'http://mangosteen.tobesoft.co.kr/nexus/repository/maven-public'
+		allowInsecureProtocol = true  // http라서 명시 필요
+	}
 }
 
 dependencies {
@@ -26,18 +31,36 @@ dependencies {
 	//implementation 'io.jsonwebtoken:jjwt-impl:0.12.3'
 	//implementation 'io.jsonwebtoken:jjwt-jackson:0.12.3'
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:4.0.1'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
-	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:4.0.1'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.0.1'
 	testCompileOnly 'org.projectlombok:lombok'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	testAnnotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	// Nexacro uiadapter17
+	implementation('com.nexacro.uiadapter17.spring:uiadapter17-spring-core:1.0.0-SNAPSHOT') {
+		exclude group: 'org.springframework', module: 'spring-webmvc'
+		exclude group: 'org.slf4j',           module: 'slf4j-api'
+	}
+	implementation('com.nexacro.uiadapter17.spring:uiadapter17-spring-dataaccess:1.0.0-SNAPSHOT') {
+		exclude group: 'org.springframework', module: 'spring-webmvc'
+		exclude group: 'org.aspectj',         module: 'aspectjweaver'
+		exclude group: 'org.apache.ibatis',   module: 'ibatis-sqlmap'
+		exclude group: 'org.mybatis',         module: 'mybatis'
+		exclude group: 'org.mybatis',         module: 'mybatis-spring'
+		exclude group: 'org.springframework', module: 'spring-orm'
+	}
+	implementation('com.nexacro.uiadapter17.spring:uiadapter17-spring-excel:1.0.0-SNAPSHOT') {
+		exclude group: 'org.springframework', module: 'spring-webmvc'
+	}
 }
 
 tasks.named('test') {

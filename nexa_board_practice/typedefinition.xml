@@ -54,7 +54,7 @@
     <Service prefixid="extlib" type="resource" url="./_extlib_/" version="0" cachelevel="session" include_subdir="true"/>
     <Service prefixid="Base" type="form" url="./Base/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
     <Service prefixid="FrameBase" type="form" url="./FrameBase/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
-    <Service prefixid="BoardSrv" type="JSP" version="0" cachelevel="none" include_subdir="false" communicationversion="0" url="http://localhost:8081/boards/"/>
+    <Service prefixid="BoardSrv" type="JSP" version="0" cachelevel="none" include_subdir="false" communicationversion="0" url="http://localhost/board_study/boards/"/>
   </Services>
   <Protocols/>
   <DeviceAdaptors/>

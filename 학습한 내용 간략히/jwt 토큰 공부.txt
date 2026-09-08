@@ -1,0 +1,32 @@
+jwt 토큰 공부
+JWT(Json Web Token)
+여기서 Token은 인증서 말하는 것임
+쉽게 말헤 Json 객체에 인증 정보를 담음
+객체와 json 차이
+객체:
+{
+	'name' : 'kim',
+	'address' : 'ulsan'
+}
+JSON:
+"
+{
+	'name' : 'kim',
+	'address' : 'ulsan'
+}
+"
+쉽게 말해 json은 객체를 문자열로 바꿔준 것임
+
+쉽게 말해 jwt는 입장권이라 보면 됨
+
+header
+{
+	"alg" : "HS256", -> 알고리즘
+	"typ" : "jwt" -> 타입
+}
+
+dispatcher-servlet은 대장 controller임
+
+싱글톤이란, 객체가 하나밖에 없으면 더이상 만들지 않고 막아버림
+
+jwt 토큰 강의영상 40분까지 시청했음

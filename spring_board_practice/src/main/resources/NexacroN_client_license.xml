@@ -13,14 +13,13 @@
 	</customer>
 	<date>
 		<activation>2026-09-01</activation>
-		<term unit="month">3</term>
+		<term unit="month">2</term>
 	</date>
-	<key>J5KQ32723FK3F82P4Y8G2APMNH4W76Z1F</key>
-	<SignatureValue>VHxvhEyZMWVl7xjofuWuTmUzGYqriVFrhaVI5fkB24jCbg3+DVUzoayKCPnwXINt
-9b9X1yqClbzYY/m97VTpsbVN1PyqMPxqVyWkRKsjOWuxUOfZajw0qoE/mB3V/LoZ
-70IFLAwinhvBpHFpLRCOU5xuYOcsoHk7x5x5pe/kh2q9ahDY01MrThAbcwzIvyl0
-730c5HyEj0BCFtaUlVaFxF1fGCJOXItMjwsFOOdembbuaZZ1cHWbbrZm0wxIkFGJ
-0ZKxt0Kqqg+TuzPPt3Dix5fFiPwQXm8vsnW2OuUeEnuDR8Ul8MxCCUV7aLyJPi6D
-3aIc5SAb9Dg3DLPIXh1VkA==</SignatureValue>
+	<key>FXXNNX45JMQ8HAKF19RZFQYYFPGZJNZAJ</key>
+	<SignatureValue>UkMspAN2r3z36ddh/6gbIeICfcG5u6TkfguxHl4+vR1ccJ7thf7SZO68OGLSjsjU
+ZA4wIRAGYw1eI6B0RXwf7OH6pll4aJNNWibXna5sBuxKxB4p4OULIH5fHP8Ydt+O
+FpVn65KpMNj0TkTo3GhrSB8m79bJTC89MjX6wqOtS07JlOCyB9yA1DyJZdiCI1SY
+VJCmOFFoHWJQkYhoEARCv5kGNXQWXmBxoQlN4O+/PPm6+K3AtD8A7K5Cr4C4G+w0
+h4ppCFd3VPQhk+Z3Hg3VAS1hpbny0C5MFXn4J8MAMrmRpiODFZ7jZyRiLWPF4n0r
+yOOAmWxejre2EXy6Pweldg==</SignatureValue>
 </license>
-

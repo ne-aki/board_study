@@ -33,6 +33,13 @@
                 </bean>
             </list>
         </property>
+        <!-- 이 어댑터가 앱의 모든 @RequestMapping을 가로채므로, 일반 JSON REST 컨트롤러 응답을 위해 기본 컨버터도 등록 -->
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+            </list>
+        </property>
     </bean>
 
     <!-- 넥사크로플랫폼 EXCEPTION-RESOLVER 등록 -->

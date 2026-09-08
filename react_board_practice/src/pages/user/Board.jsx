@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import styles from '../css/Board.module.css'
+import styles from '../../css/Board.module.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import dayjs from 'dayjs';
 
 const Board = () => {
     const [boardList, setBoardList] = useState([]);
@@ -26,23 +27,33 @@ const Board = () => {
             <table className={styles.boardList}>
                 <thead>
                     <tr>
+                        <td>
+                            <input type="checkbox" name="chkAll" />
+                        </td>
                         <td>No</td>
                         <td>제목</td>
                         <td>작성자</td>
                         <td>작성일</td>
+                        <td>삭제</td>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         boardList.map((board, i) => {
-                            console.log("게시판 정보 하나 출력 : ");
-                            console.log(board);
+                            //console.log("게시판 정보 하나 출력 : ");
+                            //console.log(board);
                             return(
                                 <tr key={i}>
+                                    <td>
+                                        <input type="checkbox" name="" id="" />
+                                    </td>
                                     <td>{boardList.length - i}</td>
                                     <td>{board.title}</td>
                                     <td>{board.writer}</td>
-                                    <td>{board.regDate}</td>
+                                    <td>{dayjs(board.regDate).format('YYYY년 MM월 DD일')}</td>
+                                    <td>
+                                        <button type="button">삭제</button>
+                                    </td>
                                 </tr>
                             );
                         })

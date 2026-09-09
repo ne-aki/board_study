@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Reg_Board" width="1280" height="720" titletext="New Form" onload="Form_Reg_Board_onload">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Static id="staRegBoard" taborder="0" text="게시글 작성" left="34" top="30" width="156" height="60" font="bold 24px/normal &quot;Malgun Gothic&quot;" textAlign="center"/>
+        <Static id="staTitle" taborder="1" text="제목" left="52" top="90" width="60" height="30"/>
+        <Edit id="edtTitle" taborder="2" left="52" top="120" width="140" height="20"/>
+        <Static id="staWriter" taborder="3" text="작성자" left="50" top="150" width="60" height="30"/>
+        <Edit id="edtWriter" taborder="4" left="50" top="180" width="140" height="20"/>
+        <Static id="staContent" taborder="5" text="내용" left="50" top="210" width="60" height="30"/>
+        <TextArea id="taContent" taborder="6" left="50" top="240" width="230" height="70"/>
+        <Button id="btnRegBoard" taborder="7" text="등록" left="50" top="350" width="80" height="35" onclick="btnRegBoard_onclick"/>
+        <Button id="btnGoList" taborder="8" text="목록" left="150" top="350" width="80" height="35" onclick="btnGoList_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Form_Reg_Board_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.dsBoard.clearData();
+	this.dsBoard.addRow();
+};
+
+this.btnRegBoard_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var isRegBoard = this.confirm("등록하시겠습니까?");
+	if (isRegBoard)
+	{
+		this.transaction(
+			"regBoard"
+			, "BoardSrv::regBoard.do"
+			, "dsBoard=dsBoard"
+			, ""
+			, ""
+			, "fnCallback"
+		);
+		this.alert("등록되었습니다.");
+		this.go("FrameBase::Form_Board.xfdl");
+	}
+};
+
+this.btnGoList_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.go("FrameBase::Form_Board.xfdl");
+};
+
+]]></Script>
+    <Objects>
+      <Dataset id="dsBoard">
+        <ColumnInfo>
+          <Column id="title" type="STRING" size="256"/>
+          <Column id="writer" type="STRING" size="256"/>
+          <Column id="content" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="edtTitle" propid="value" datasetid="dsBoard" columnid="title"/>
+      <BindItem id="item1" compid="edtWriter" propid="value" datasetid="dsBoard" columnid="writer"/>
+      <BindItem id="item2" compid="taContent" propid="value" datasetid="dsBoard" columnid="content"/>
+    </Bind>
+  </Form>
+</FDL>

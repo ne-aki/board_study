@@ -10,5 +10,5 @@ public class BoardDTO {
     private String title;
     private String content;
     private String writer;
-    private LocalDateTime regDate;
+    private String regDate;
 }

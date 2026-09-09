@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from '../css/RegBoard.module.css'
+import styles from '../../css/RegBoard.module.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -69,6 +69,7 @@ const RegBoard = () => {
                 ></textarea>
             </div>
             <div className={styles.btn_div}>
+                {/* 게시글 등록 버튼 */}
                 <button type="button" onClick={e => regBoard()}>등록</button>
                 <button type="button" onClick={e => nav('/board')}>목록</button>
             </div>

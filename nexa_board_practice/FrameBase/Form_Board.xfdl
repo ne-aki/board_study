@@ -3,31 +3,36 @@
   <Form id="Form_Board" width="1280" height="720" titletext="New Form" onload="Form_Board_onload">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
-        <Grid id="Grid00" taborder="0" left="99" top="72" width="641" height="308" binddataset="dsBoardList">
+        <Grid id="grdBoard" taborder="0" left="19" top="70" width="641" height="308" binddataset="dsBoardList" autofittype="col">
           <Formats>
             <Format id="default">
               <Columns>
-                <Column size="80"/>
-                <Column size="80"/>
-                <Column size="80"/>
+                <Column size="20"/>
+                <Column size="100"/>
+                <Column size="60"/>
+                <Column size="150"/>
               </Columns>
               <Rows>
-                <Row band="head" size="24"/>
+                <Row size="24" band="head"/>
                 <Row size="24"/>
               </Rows>
               <Band id="head">
-                <Cell text="title"/>
-                <Cell col="1" text="writer"/>
-                <Cell col="2" text="regDate"/>
+                <Cell text="No"/>
+                <Cell col="1" text="제목"/>
+                <Cell col="2" text="작성자"/>
+                <Cell col="3" text="작성일"/>
               </Band>
               <Band id="body">
-                <Cell text="bind:title"/>
-                <Cell col="1" text="bind:writer"/>
-                <Cell col="2" text="bind:regDate"/>
+                <Cell text="bind:No"/>
+                <Cell col="1" text="bind:title"/>
+                <Cell col="2" text="bind:writer"/>
+                <Cell col="3" text="bind:regDate"/>
               </Band>
             </Format>
           </Formats>
         </Grid>
+        <Button id="btnGoHome" taborder="1" text="홈화면" left="390" top="390" width="120" height="50" onclick="btnGoHome_onclick"/>
+        <Button id="btnGoRegBoard" taborder="2" text="게시글 작성" left="540" top="390" width="120" height="50" onclick="btnGoRegBoard_onclick"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.Form_Board_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
@@ -39,15 +44,50 @@
 		, "dsBoardList=dsBoardList"
 		, ""
 		, "fnCallback"
+		, false
 	);
+	
+	this.fn_setBoardList();
+	
+	//console.log(this.dsBoardList.getColumn(0, "No"));
+	//console.log(this.dsBoardList.rowcount);
 };
+
+// setBoardList의 No컬럼 세팅
+this.fn_setBoardList = function ()
+{
+	this.dsBoardList.addColumn("No", "STRING", 256);
+	
+	var rowcount = this.dsBoardList.getRowCount();
+	//console.log("loop 진입, rowcount:", rowcount);
+	
+	for (var i = 0; i < rowcount; i++)
+	{
+		var val = rowcount - i;
+		this.dsBoardList.setColumn(i, "No", val);
+		//console.log(rowcount);
+		//console.log(val);
+	}
+};
+
+this.btnGoHome_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.go("FrameBase::Form_Home.xfdl");
+};
+
+this.btnGoRegBoard_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.go("FrameBase::Form_Reg_board.xfdl")
+};
+
 ]]></Script>
     <Objects>
       <Dataset id="dsBoardList">
         <ColumnInfo>
+          <Column id="No" type="INT" size="256"/>
           <Column id="title" type="STRING" size="256"/>
           <Column id="writer" type="STRING" size="256"/>
-          <Column id="regDate" type="DATETIME" size="256"/>
+          <Column id="regDate" type="STRING" size="256"/>
         </ColumnInfo>
       </Dataset>
     </Objects>

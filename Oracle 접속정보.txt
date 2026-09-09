@@ -1,0 +1,4 @@
+Oracle 접속정보
+Host: localhost:1521
+PDB (실제 사용할 DB): localhost:1521/XEPDB1
+EM 관리 콘솔: https://localhost:5500/em

@@ -18,3 +18,10 @@ SELECT
 FROM board_study.TEST_BOARD;
 #수정반영
 -- 수정
+
+-- 회원 테이블
+create table board_study.TEST_MEMBER (
+	MEM_ID VARCHAR(30) not null
+	, MEM_PW VARCHAR(30) not null 
+	, MEM_NAME VARCHAR(30) not null
+);

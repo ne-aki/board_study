@@ -11,7 +11,7 @@
     </Rule>
     <Info project="C:\workspace\board_study\nexa_board_practice\" generated="C:\workspace\board_study\spring_board_practice\src\main\resources\static\">
       <File url="environment.xml" checksum="20260903172513" errormsg=""/>
-      <File url="typedefinition.xml" checksum="20260908202638" errormsg=""/>
+      <File url="typedefinition.xml" checksum="20260909190909" errormsg=""/>
       <File url="appvariables.xml" checksum="20260903172513" errormsg=""/>
       <File url="_resource_\_theme_\blue\theme.xcss" checksum="20260903172513" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\framework\Framework.json" checksum="20260828132524" errormsg=""/>
@@ -22,7 +22,7 @@
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ListView.json" checksum="20260828132524" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\DeviceAPI.json" checksum="20260828132520" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\MobileComp.json" checksum="20260828132526" errormsg=""/>
-      <File url="Application_Desktop.xadl" checksum="20260908202638" errormsg=""/>
+      <File url="Application_Desktop.xadl" checksum="20260909190909" errormsg=""/>
       <File url="FrameBase\Form_Board.xfdl" checksum="20260908142616" errormsg=""/>
       <File url="FrameBase\Form_Reg_Board.xfdl" checksum="20260908153826" errormsg=""/>
     </Info>
